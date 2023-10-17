@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {EmployeeService} from "../employee.service";
 
 // const employees =
@@ -24,12 +24,13 @@ export class PrimaryComponent implements OnInit {
         {"id": 3, "name": "sri", "age": 23}];*/
 
   employees: any;
+  // es = inject(EmployeeService)//<- another way to inject the service.
 
   varname = "for programmer";
   scvalue ='';
 
   constructor(private _employees: EmployeeService) {
-    this.employees = _employees.getEmployees();
+    // this.employees = _employees.getEmployees();
     this.scvalue = _employees.servicename;
   }
 
