@@ -7,14 +7,11 @@ import {EmployeeService} from "../employee.service";
 //       {"id": 3, "name": "sri", "age": 23}];
 
 @Component({
-  selector: 'app-primary',
-  templateUrl: './primary.component.html',
-  styleUrls: ['./primary.component.css'],
-  providers: [EmployeeService],
-  // todo: providers: [EmployeeService], ->another way of implementing service,It is only work this component
-  // & also only 1 instance is created for this component
-//  but If we call services for more then 1 components like this,
-//  Then more Number of instance will be created for each Component that is created by providers: [EmployeeService] statement
+    selector: 'app-primary',
+    templateUrl: './primary.component.html',
+    styleUrls: ['./primary.component.css'],
+    providers: [EmployeeService],
+    standalone: false
 })
 export class PrimaryComponent implements OnInit {
 
